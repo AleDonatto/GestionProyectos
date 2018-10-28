@@ -1,0 +1,10 @@
+C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Library\bin\Debug\Library.dll
+C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Library\bin\Debug\Library.pdb
+C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Library\bin\Debug\MySql.Data.dll
+C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Library\bin\Debug\Google.Protobuf.dll
+C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Library\bin\Debug\MySql.Data.xml
+C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Library\obj\Debug\Library.csprojAssemblyReference.cache
+C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Library\obj\Debug\Library.csproj.CoreCompileInputs.cache
+C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Library\obj\Debug\Library.csproj.CopyComplete
+C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Library\obj\Debug\Library.dll
+C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Library\obj\Debug\Library.pdb
