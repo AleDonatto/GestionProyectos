@@ -38,6 +38,8 @@
             this.cbGrupoCaptura = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvCalificaciones = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSeleccionar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCalificaciones)).BeginInit();
@@ -52,6 +54,8 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.comboBox1);
+            this.bunifuGradientPanel1.Controls.Add(this.label2);
             this.bunifuGradientPanel1.Controls.Add(this.btnSeleccionar);
             this.bunifuGradientPanel1.Controls.Add(this.cbGrupoCaptura);
             this.bunifuGradientPanel1.Controls.Add(this.label1);
@@ -71,7 +75,7 @@
             this.btnSeleccionar.BackColor = System.Drawing.Color.White;
             this.btnSeleccionar.Image = ((System.Drawing.Image)(resources.GetObject("btnSeleccionar.Image")));
             this.btnSeleccionar.ImageActive = null;
-            this.btnSeleccionar.Location = new System.Drawing.Point(433, 63);
+            this.btnSeleccionar.Location = new System.Drawing.Point(803, 71);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(36, 32);
             this.btnSeleccionar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -133,10 +137,35 @@
             this.dgvCalificaciones.Size = new System.Drawing.Size(980, 378);
             this.dgvCalificaciones.TabIndex = 0;
             this.dgvCalificaciones.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCalificaciones_CellMouseDoubleClick);
-            this.dgvCalificaciones.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvCalificaciones_CellPainting);
-            this.dgvCalificaciones.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvCalificaciones_EditingControlShowing);
             this.dgvCalificaciones.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvCalificaciones_RowsAdded);
             this.dgvCalificaciones.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgvCalificaciones_KeyPress);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.comboBox1.Location = new System.Drawing.Point(601, 71);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(179, 24);
+            this.comboBox1.TabIndex = 5;
+            this.comboBox1.Text = "Seleccione una opcion:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(428, 74);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(167, 17);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Periodo de Calificaciones";
             // 
             // Captura_Calificaciones
             // 
@@ -163,5 +192,7 @@
         private Bunifu.Framework.UI.BunifuImageButton btnSeleccionar;
         private System.Windows.Forms.ComboBox cbGrupoCaptura;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -16,7 +16,7 @@ namespace Presentacion
         public Captura_Calificaciones()
         {
             InitializeComponent();
-            Cargar_Opciones_Tabla();
+            //Cargar_Opciones_Tabla();
         }
 
         Query consultas = new Query(); 
@@ -30,140 +30,58 @@ namespace Presentacion
             dgvCalificaciones.Columns.Add(btncol);
         }
 
-       /* public void Dibujar_tabla() {
-            if (e.ColumnIndex >= 0 && this.dgvCalificaciones.Columns[e.ColumnIndex].Name == "Guardar" && e.RowIndex >= 0)
-            {
-                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-                DataGridViewButtonCell cellbuton = this.dgvCalificaciones.Rows[e.RowIndex].Cells["Guardar"] as DataGridViewButtonCell;
+        /* public void Dibujar_tabla() {
+             if (e.ColumnIndex >= 0 && this.dgvCalificaciones.Columns[e.ColumnIndex].Name == "Guardar" && e.RowIndex >= 0)
+             {
+                 e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                 DataGridViewButtonCell cellbuton = this.dgvCalificaciones.Rows[e.RowIndex].Cells["Guardar"] as DataGridViewButtonCell;
 
-                Cargar_Opciones_Tabla();
-            }
-        }*/
+                 Cargar_Opciones_Tabla();
+             }
+         }
+          private void dgvCalificaciones_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+         {
+             if (e.ColumnIndex >= 0 && this.dgvCalificaciones.Columns[e.ColumnIndex].Name == "Guardar" && e.RowIndex >= 0) {
+                 e.Paint(e.CellBounds,DataGridViewPaintParts.All);
+                 DataGridViewButtonCell cellbuton = this.dgvCalificaciones.Rows[e.RowIndex].Cells["Guardar"] as DataGridViewButtonCell;
 
-        private void dgvCalificaciones_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            if (e.ColumnIndex >= 0 && this.dgvCalificaciones.Columns[e.ColumnIndex].Name == "Guardar" && e.RowIndex >= 0) {
-                e.Paint(e.CellBounds,DataGridViewPaintParts.All);
-                DataGridViewButtonCell cellbuton = this.dgvCalificaciones.Rows[e.RowIndex].Cells["Guardar"] as DataGridViewButtonCell;
+                 Cargar_Opciones_Tabla();
 
-                Cargar_Opciones_Tabla();
+                 //Icon iconoboton = new Icon(Environment.CurrentDirectory + @"\\delete.ico");
+                 //e.Graphics.DrawIcon(iconoboton,e.CellBounds.Left + 3, e.CellBounds.Top + 3);
 
-                //Icon iconoboton = new Icon(Environment.CurrentDirectory + @"\\delete.ico");
-                //e.Graphics.DrawIcon(iconoboton,e.CellBounds.Left + 3, e.CellBounds.Top + 3);
+                 //this.dgvCalificaciones.Rows[e.RowIndex].Height = iconoboton.Height + 8;
+                 //this.dgvCalificaciones.Columns[e.ColumnIndex].Width = iconoboton.Width + 8;
 
-                //this.dgvCalificaciones.Rows[e.RowIndex].Height = iconoboton.Height + 8;
-                //this.dgvCalificaciones.Columns[e.ColumnIndex].Width = iconoboton.Width + 8;
+                 //e.Handled = true;
 
-                //e.Handled = true;
+             } */
 
-            }
-
-        }
-        
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
             if (cbGrupoCaptura.Text == "1" || cbGrupoCaptura.Text == "2")
             {
-                
                 ds = consultas.C_alumnos_calificaciones_grado1();
                 dgvCalificaciones.DataSource = ds.Tables[0];
-                DataGridViewTextBoxColumn español = new DataGridViewTextBoxColumn();
-                español.HeaderText = "Español";
-                dgvCalificaciones.Columns.Add(español);
-                DataGridViewTextBoxColumn mate = new DataGridViewTextBoxColumn();
-                mate.HeaderText = "Matemeticas";
-                dgvCalificaciones.Columns.Add(mate);
-                DataGridViewTextBoxColumn civismo = new DataGridViewTextBoxColumn();
-                civismo.HeaderText = "Civismo";
-                dgvCalificaciones.Columns.Add(civismo);
-                DataGridViewTextBoxColumn efisica = new DataGridViewTextBoxColumn();
-                efisica.HeaderText = "Educacion Fisica";
-                dgvCalificaciones.Columns.Add(efisica);
-                DataGridViewTextBoxColumn artes = new DataGridViewTextBoxColumn();
-                artes.HeaderText = "Artes";
-                dgvCalificaciones.Columns.Add(artes);
-                DataGridViewTextBoxColumn misoc = new DataGridViewTextBoxColumn();
-                misoc.HeaderText = "Mi sociedad";
-                dgvCalificaciones.Columns.Add(misoc);
-                DataGridViewTextBoxColumn compu = new DataGridViewTextBoxColumn();
-                compu.HeaderText = "Computacion";
-                dgvCalificaciones.Columns.Add(compu);
-                DataGridViewTextBoxColumn ingles = new DataGridViewTextBoxColumn();
-                ingles.HeaderText = "Ingles";
-                dgvCalificaciones.Columns.Add(ingles);
+                Primer_segundo_grado();
+                Cargar_Opciones_Tabla();
             }
             else if (cbGrupoCaptura.Text == "3")
             {
-                ds = consultas.C_alumnos_calificaciones_grado3();
-                dgvCalificaciones.DataSource = ds.Tables[0];
-
-                DataGridViewTextBoxColumn español = new DataGridViewTextBoxColumn();
-                español.HeaderText = "Español";
-                dgvCalificaciones.Columns.Add(español);
-                DataGridViewTextBoxColumn mate = new DataGridViewTextBoxColumn();
-                mate.HeaderText = "Matemeticas";
-                dgvCalificaciones.Columns.Add(mate);
-                DataGridViewTextBoxColumn nat = new DataGridViewTextBoxColumn();
-                nat.HeaderText = "Ciencias Naturales";
-                dgvCalificaciones.Columns.Add(nat);
-                DataGridViewTextBoxColumn entidad = new DataGridViewTextBoxColumn();
-                entidad.HeaderText = "Entidad donde Vivo";
-                dgvCalificaciones.Columns.Add(entidad);
-                DataGridViewTextBoxColumn civica = new DataGridViewTextBoxColumn();
-                civica.HeaderText = "Formacion Civica y Etica";
-                dgvCalificaciones.Columns.Add(civica);
-                DataGridViewTextBoxColumn fisica = new DataGridViewTextBoxColumn();
-                fisica.HeaderText = "Educacion Fisica";
-                dgvCalificaciones.Columns.Add(fisica);
-                DataGridViewTextBoxColumn artes = new DataGridViewTextBoxColumn();
-                artes.HeaderText = "Educacion Artistica";
-                dgvCalificaciones.Columns.Add(artes);
-                DataGridViewTextBoxColumn compu = new DataGridViewTextBoxColumn();
-                compu.HeaderText = "Computacion";
-                dgvCalificaciones.Columns.Add(compu);
-                DataGridViewTextBoxColumn ingles = new DataGridViewTextBoxColumn();
-                ingles.HeaderText = "Ingles";
-                dgvCalificaciones.Columns.Add(ingles);
+                Quitar_mat_1();
+                //ds = consultas.C_alumnos_calificaciones_grado3();
+                //dgvCalificaciones.DataSource = ds.Tables[0];
+                //Tercer_grado();
+                //Cargar_Opciones_Tabla();               
             }
             else if (cbGrupoCaptura.Text == "4" || cbGrupoCaptura.Text == "5" || cbGrupoCaptura.Text == "6")
             {
                 ds = consultas.C_alumnos_calificaciones_grado4();
                 dgvCalificaciones.DataSource = ds.Tables[0];
-
-                DataGridViewTextBoxColumn español = new DataGridViewTextBoxColumn();
-                español.HeaderText = "Español";
-                dgvCalificaciones.Columns.Add(español);
-                DataGridViewTextBoxColumn mate = new DataGridViewTextBoxColumn();
-                mate.HeaderText = "Matemeticas";
-                dgvCalificaciones.Columns.Add(mate);
-                DataGridViewTextBoxColumn nat = new DataGridViewTextBoxColumn();
-                nat.HeaderText = "Ciencias Naturales";
-                dgvCalificaciones.Columns.Add(nat);
-                DataGridViewTextBoxColumn goe = new DataGridViewTextBoxColumn();
-                goe.HeaderText = "Geografica";
-                dgvCalificaciones.Columns.Add(goe);
-                DataGridViewTextBoxColumn historia = new DataGridViewTextBoxColumn();
-                historia.HeaderText = "Historia";
-                dgvCalificaciones.Columns.Add(historia);
-                DataGridViewTextBoxColumn civica = new DataGridViewTextBoxColumn();
-                civica.HeaderText = "Formacion Civica y Etica";
-                dgvCalificaciones.Columns.Add(civica);
-                DataGridViewTextBoxColumn fisica = new DataGridViewTextBoxColumn();
-                fisica.HeaderText = "Educacion Fisica";
-                dgvCalificaciones.Columns.Add(fisica);
-                DataGridViewTextBoxColumn artes = new DataGridViewTextBoxColumn();
-                artes.HeaderText = "Educacion Artistica";
-                dgvCalificaciones.Columns.Add(artes);
-                DataGridViewTextBoxColumn compu = new DataGridViewTextBoxColumn();
-                compu.HeaderText = "Computacion";
-                dgvCalificaciones.Columns.Add(compu);
-                DataGridViewTextBoxColumn ingles = new DataGridViewTextBoxColumn();
-                ingles.HeaderText = "Ingles";
-                dgvCalificaciones.Columns.Add(ingles);
-            }
-            
-            
+                Cuarto_quinto_sexto();
+                Cargar_Opciones_Tabla();
+            }   
         }
 
         private void dgvCalificaciones_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -224,7 +142,6 @@ namespace Presentacion
                     MessageBox.Show(mensaje, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
-                
             }
             else if (cbGrupoCaptura.Text == "4" || cbGrupoCaptura.Text == "5" || cbGrupoCaptura.Text == "6")
             {
@@ -255,9 +172,7 @@ namespace Presentacion
             else if (cbGrupoCaptura.SelectedIndex == -1) {
                 MessageBox.Show("Seleccione un grupo primero","ADVERTENCIA",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
-
-            
-            
+                                    
         }
 
         private void dgvCalificaciones_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
@@ -265,22 +180,6 @@ namespace Presentacion
             int nuero_filas = 10;
 
             dgvCalificaciones.AllowUserToAddRows = dgvCalificaciones.RowCount <= nuero_filas;
-        }
-
-        private void dgvCalificaciones_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
-        {
-            /*if (dgvCalificaciones.CurrentCell.ColumnIndex == 5 || dgvCalificaciones.CurrentCell.ColumnIndex == 6 || dgvCalificaciones.CurrentCell.ColumnIndex == 7 ||
-                dgvCalificaciones.CurrentCell.ColumnIndex == 8 || dgvCalificaciones.CurrentCell.ColumnIndex == 9 || dgvCalificaciones.CurrentCell.ColumnIndex == 10)
-            {
-                TextBox txt = e.Control as TextBox;
-
-                if (txt != null)
-                {
-                    txt.KeyPress -= new KeyEventHandler(dgvCalificaciones_KeyPress);
-                    txt.KeyPress += new KeyEventHandler(dgvCalificaciones_KeyPress);
-                }
-
-            }*/
         }
 
         private void dgvCalificaciones_KeyPress(object sender, KeyPressEventArgs e)
@@ -292,6 +191,104 @@ namespace Presentacion
             }
             else
                 e.Handled = true;
+        }
+
+
+        public void Primer_segundo_grado() {
+            DataGridViewTextBoxColumn español = new DataGridViewTextBoxColumn();
+            español.HeaderText = "Español";
+            dgvCalificaciones.Columns.Add(español);
+            DataGridViewTextBoxColumn mate = new DataGridViewTextBoxColumn();
+            mate.HeaderText = "Matematicas";
+            dgvCalificaciones.Columns.Add(mate);
+            DataGridViewTextBoxColumn civismo = new DataGridViewTextBoxColumn();
+            civismo.HeaderText = "Civismo";
+            dgvCalificaciones.Columns.Add(civismo);
+            DataGridViewTextBoxColumn efisica = new DataGridViewTextBoxColumn();
+            efisica.HeaderText = "Educacion Fisica";
+            dgvCalificaciones.Columns.Add(efisica);
+            DataGridViewTextBoxColumn artes = new DataGridViewTextBoxColumn();
+            artes.HeaderText = "Artes";
+            dgvCalificaciones.Columns.Add(artes);
+            DataGridViewTextBoxColumn misoc = new DataGridViewTextBoxColumn();
+            misoc.HeaderText = "Mi sociedad";
+            dgvCalificaciones.Columns.Add(misoc);
+            DataGridViewTextBoxColumn compu = new DataGridViewTextBoxColumn();
+            compu.HeaderText = "Computacion";
+            dgvCalificaciones.Columns.Add(compu);
+            DataGridViewTextBoxColumn ingles = new DataGridViewTextBoxColumn();
+            ingles.HeaderText = "Ingles";
+            dgvCalificaciones.Columns.Add(ingles);
+        }
+
+        public void Tercer_grado() {
+            DataGridViewTextBoxColumn español = new DataGridViewTextBoxColumn();
+            español.HeaderText = "Español";
+            dgvCalificaciones.Columns.Add(español);
+            DataGridViewTextBoxColumn mate = new DataGridViewTextBoxColumn();
+            mate.HeaderText = "Matemeticas";
+            dgvCalificaciones.Columns.Add(mate);
+            DataGridViewTextBoxColumn nat = new DataGridViewTextBoxColumn();
+            nat.HeaderText = "Ciencias Naturales";
+            dgvCalificaciones.Columns.Add(nat);
+            DataGridViewTextBoxColumn entidad = new DataGridViewTextBoxColumn();
+            entidad.HeaderText = "Entidad donde Vivo";
+            dgvCalificaciones.Columns.Add(entidad);
+            DataGridViewTextBoxColumn civica = new DataGridViewTextBoxColumn();
+            civica.HeaderText = "Formacion Civica y Etica";
+            dgvCalificaciones.Columns.Add(civica);
+            DataGridViewTextBoxColumn fisica = new DataGridViewTextBoxColumn();
+            fisica.HeaderText = "Educacion Fisica";
+            dgvCalificaciones.Columns.Add(fisica);
+            DataGridViewTextBoxColumn artes = new DataGridViewTextBoxColumn();
+            artes.HeaderText = "Educacion Artistica";
+            dgvCalificaciones.Columns.Add(artes);
+            DataGridViewTextBoxColumn compu = new DataGridViewTextBoxColumn();
+            compu.HeaderText = "Computacion";
+            dgvCalificaciones.Columns.Add(compu);
+            DataGridViewTextBoxColumn ingles = new DataGridViewTextBoxColumn();
+            ingles.HeaderText = "Ingles";
+            dgvCalificaciones.Columns.Add(ingles);
+        }
+
+        public void Cuarto_quinto_sexto() {
+            DataGridViewTextBoxColumn español = new DataGridViewTextBoxColumn();
+            español.HeaderText = "Español";
+            dgvCalificaciones.Columns.Add(español);
+            DataGridViewTextBoxColumn mate = new DataGridViewTextBoxColumn();
+            mate.HeaderText = "Matemeticas";
+            dgvCalificaciones.Columns.Add(mate);
+            DataGridViewTextBoxColumn nat = new DataGridViewTextBoxColumn();
+            nat.HeaderText = "Ciencias Naturales";
+            dgvCalificaciones.Columns.Add(nat);
+            DataGridViewTextBoxColumn goe = new DataGridViewTextBoxColumn();
+            goe.HeaderText = "Geografica";
+            dgvCalificaciones.Columns.Add(goe);
+            DataGridViewTextBoxColumn historia = new DataGridViewTextBoxColumn();
+            historia.HeaderText = "Historia";
+            dgvCalificaciones.Columns.Add(historia);
+            DataGridViewTextBoxColumn civica = new DataGridViewTextBoxColumn();
+            civica.HeaderText = "Formacion Civica y Etica";
+            dgvCalificaciones.Columns.Add(civica);
+            DataGridViewTextBoxColumn fisica = new DataGridViewTextBoxColumn();
+            fisica.HeaderText = "Educacion Fisica";
+            dgvCalificaciones.Columns.Add(fisica);
+            DataGridViewTextBoxColumn artes = new DataGridViewTextBoxColumn();
+            artes.HeaderText = "Educacion Artistica";
+            dgvCalificaciones.Columns.Add(artes);
+            DataGridViewTextBoxColumn compu = new DataGridViewTextBoxColumn();
+            compu.HeaderText = "Computacion";
+            dgvCalificaciones.Columns.Add(compu);
+            DataGridViewTextBoxColumn ingles = new DataGridViewTextBoxColumn();
+            ingles.HeaderText = "Ingles";
+            dgvCalificaciones.Columns.Add(ingles);
+        }
+
+        public void Quitar_mat_1() {
+            while(dgvCalificaciones.ColumnCount > 1) {
+                dgvCalificaciones.Columns.RemoveAt(0);
+                dgvCalificaciones.Columns.Remove("btnGuardar");
+            }
         }
     }
 }
