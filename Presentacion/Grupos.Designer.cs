@@ -35,6 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnListasGrupos = new Bunifu.Framework.UI.BunifuThinButton2();
             this.dgvGrupos = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,12 +56,13 @@
             this.CBGruposeleccinar = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnListasGrupos = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrupos)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefrescar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar_grupo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -72,6 +74,7 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuImageButton1);
             this.bunifuGradientPanel1.Controls.Add(this.btnListasGrupos);
             this.bunifuGradientPanel1.Controls.Add(this.dgvGrupos);
             this.bunifuGradientPanel1.Controls.Add(this.btnModificar_grupo);
@@ -99,6 +102,32 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1020, 624);
             this.bunifuGradientPanel1.TabIndex = 0;
+            // 
+            // btnListasGrupos
+            // 
+            this.btnListasGrupos.ActiveBorderThickness = 1;
+            this.btnListasGrupos.ActiveCornerRadius = 20;
+            this.btnListasGrupos.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnListasGrupos.ActiveForecolor = System.Drawing.Color.White;
+            this.btnListasGrupos.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnListasGrupos.BackColor = System.Drawing.SystemColors.Control;
+            this.btnListasGrupos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnListasGrupos.BackgroundImage")));
+            this.btnListasGrupos.ButtonText = "Ver Listas de Grupos";
+            this.btnListasGrupos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnListasGrupos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListasGrupos.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnListasGrupos.IdleBorderThickness = 1;
+            this.btnListasGrupos.IdleCornerRadius = 20;
+            this.btnListasGrupos.IdleFillColor = System.Drawing.Color.White;
+            this.btnListasGrupos.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnListasGrupos.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnListasGrupos.Location = new System.Drawing.Point(776, 61);
+            this.btnListasGrupos.Margin = new System.Windows.Forms.Padding(5);
+            this.btnListasGrupos.Name = "btnListasGrupos";
+            this.btnListasGrupos.Size = new System.Drawing.Size(181, 41);
+            this.btnListasGrupos.TabIndex = 18;
+            this.btnListasGrupos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnListasGrupos.Click += new System.EventHandler(this.btnListasGrupos_Click);
             // 
             // dgvGrupos
             // 
@@ -347,31 +376,21 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Conslta de grupos.";
             // 
-            // btnListasGrupos
+            // bunifuImageButton1
             // 
-            this.btnListasGrupos.ActiveBorderThickness = 1;
-            this.btnListasGrupos.ActiveCornerRadius = 20;
-            this.btnListasGrupos.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnListasGrupos.ActiveForecolor = System.Drawing.Color.White;
-            this.btnListasGrupos.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnListasGrupos.BackColor = System.Drawing.SystemColors.Control;
-            this.btnListasGrupos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnListasGrupos.BackgroundImage")));
-            this.btnListasGrupos.ButtonText = "Ver Listas de Grupos";
-            this.btnListasGrupos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnListasGrupos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListasGrupos.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnListasGrupos.IdleBorderThickness = 1;
-            this.btnListasGrupos.IdleCornerRadius = 20;
-            this.btnListasGrupos.IdleFillColor = System.Drawing.Color.White;
-            this.btnListasGrupos.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnListasGrupos.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnListasGrupos.Location = new System.Drawing.Point(776, 61);
-            this.btnListasGrupos.Margin = new System.Windows.Forms.Padding(5);
-            this.btnListasGrupos.Name = "btnListasGrupos";
-            this.btnListasGrupos.Size = new System.Drawing.Size(181, 41);
-            this.btnListasGrupos.TabIndex = 18;
-            this.btnListasGrupos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnListasGrupos.Click += new System.EventHandler(this.btnListasGrupos_Click);
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.White;
+            this.bunifuImageButton1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(978, 3);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(39, 35);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 19;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // Grupos
             // 
@@ -388,6 +407,7 @@
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnRefrescar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar_grupo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -417,5 +437,6 @@
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvGrupos;
         private Bunifu.Framework.UI.BunifuThinButton2 btnListasGrupos;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
     }
 }

@@ -10,12 +10,12 @@ namespace Library
 {
     public class Query
     {
-        MySqlConnection conexion = new MySqlConnection("server=localhost; database=control_escolar; user=root; pwd=abcd;");
+        MySqlConnection conexion = new MySqlConnection("server=127.0.0.1; user=root; pwd=; database=control_escolar; SslMode=none;");
 
         #region inicio de sesion
         public string login(string name, string contra, ref string nameok, ref string apellido, ref string cargo) {
             conexion.Open();
-            string query = "select * from control_escolar.Usuarios where id_usuario = @name and Contraseña = @contra;";
+            string query = "select * from usuarios where id_usuario = @name and Contraseña = @contra;";
             MySqlCommand comando = new MySqlCommand();
             comando.CommandText = query;
             comando.Parameters.AddWithValue("@name",name);
@@ -87,7 +87,7 @@ namespace Library
                 conexion.Close();
                 return "Registro elimnado";
             }
-            catch (MySqlException ex) {
+            catch (MySqlException) {
                 conexion.Close();
                 return "Para eliminar un grupo no debe tener alumnos en el.";
             }
@@ -95,6 +95,13 @@ namespace Library
         #endregion
 
         #region materias
+        public DataSet Cargar_Periodos() {
+            conexion.Open();
+            MySqlCommand mysqldata = new MySqlCommand("SELECT idHospital FROM hospital", conexion);
+            DataSet ds = new DataSet();
+            MySqlDataReader da = mysqldata.ExecuteReader();
+        }
+
 
         public DataSet Consultar_Materias() {
             conexion.Open();
@@ -127,7 +134,7 @@ namespace Library
                 conexion.Close();
                 return "Datos Actualizados correctamente";
             }
-            catch (MySqlException ex) {
+            catch (MySqlException) {
                 conexion.Close();
                 return "Excepcion no controlada";
             }
@@ -141,7 +148,7 @@ namespace Library
                 comando.ExecuteNonQuery();
                 conexion.Close();
                 return "Dato Creado Correctamente.";
-            } catch (MySqlException ex) {
+            } catch (MySqlException) {
                 conexion.Close();
                 return "Excepcion no controlada.";
             }
@@ -155,7 +162,7 @@ namespace Library
                 comando.ExecuteNonQuery();
                 conexion.Close();
                 return "Dato Eliminado.";
-            } catch (MySqlException ex) {
+            } catch (MySqlException) {
                 conexion.Close();
                 return "Excepcion no Controlada.";
             }
@@ -193,7 +200,7 @@ namespace Library
                 comando.ExecuteNonQuery();
                 conexion.Close();
                 return "Datos del alumnos actualizados correctamente.";
-            } catch (MySqlException ex) {
+            } catch (MySqlException) {
                 conexion.Close();
                 return "Excepcion no controlada.";
             }
@@ -207,7 +214,7 @@ namespace Library
                 comando.ExecuteNonQuery();
                 conexion.Close();
                 return "Registro eliminado correctamente.";
-            } catch (MySqlException ex) {
+            } catch (MySqlException) {
                 conexion.Close();
                 return "Excepcion no controla. No puede eliminar el registro otros datos dependen de este.";
             }
@@ -247,12 +254,12 @@ namespace Library
         public string Insertar_detalle_alumno(string genero, string tipo_sangre, string alergias, string enfermedad_cronica ,string CURP) {
             conexion.Open();
             try {
-                string consulta = string.Format("Insert into control_escolar.detalle_alumnos() values('{0}','{1}','{2}','{3}','{4}');",genero,tipo_sangre,alergias,enfermedad_cronica,CURP);
+                string consulta = string.Format("Insert into control_escolar.detalle_alumnos() values('{0}','{1}','{2}','{3}','{4}');", genero,tipo_sangre,alergias,enfermedad_cronica,CURP);
                 MySqlCommand comando = new MySqlCommand(consulta,conexion);
                 comando.ExecuteNonQuery();
                 conexion.Close();
                 return "El detalle del alumno se agrego correctamente.";
-            } catch (MySqlException ex) {
+            } catch (MySqlException) {
                 conexion.Close();
                 return "Excepcion no controlada.";
             }
@@ -267,7 +274,7 @@ namespace Library
                 comando.ExecuteNonQuery();
                 conexion.Close();
                 return "Datos Actualizados Correctamente.";
-            } catch (MySqlException ex) {
+            } catch (MySqlException) {
                 conexion.Close();
                 return "Excepcion no controlada.";
             }
@@ -282,7 +289,7 @@ namespace Library
                 comando.ExecuteNonQuery();
                 conexion.Close();
                 return "Dato eliminado correctamente.";
-            } catch (MySqlException ex) {
+            } catch (MySqlException) {
                 conexion.Close();
                 return "Excepcion no controlada.";
             }

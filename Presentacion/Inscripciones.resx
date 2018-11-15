@@ -128,21 +128,15 @@
         RU5ErkJggg==
 </value>
   </data>
-  <data name="btnGuardar_Tutor.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnRefrescar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAMwAAAApCAYAAAB5q8bDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKDSURBVHhe7ZzNS1RRGIf7i9q1adeqVW4KgnBRLiQoMAIj
-        JKJFhCKhLkaIDINKE4sRgySkGMWhmOhDJJwE7XMEtfASLqQWb/zOvXPtNmcGz3bmeeABYZxZ3Ye558x9
-        z4EoigwR9yfBIAZIMIgBEgxigASDGCDBIAbYMJiNH1v2+M2sXczftNMPrtrRW+fsYP9JxKZS17Wu7/OP
-        em28NGPfN9e9Pci6wTxbWnAf1D09aDPLRXv99YNVok0DaDZ0Xev6fr5SsitPc+66Vzi+LmqCUV2Xp4fs
-        7OQN29rZTj4SoHX4tbvjwumcuG6r618yfWSCUSzHR7ttaqmQvBWgdVlYe2en7vVY+duqPxh9sxALwB66
-        VdP6piYYrVl0GwYAWQbnx2x4bmIvGO2GaaHDmgWglt0/v+3E3Uu2+LkcB6MdAS1yAMDPnVdT1jc7Ggej
-        /WdtqQGAn/LGJ7ch5oI5drvL1n5WkpcA4H90W3ZooD0O5vDQGbf3DAD10VMBLhj9AQCNIRiAAAgGIACC
-        AQiAYAACIBiAAAgGIACCAQggDUa/YOqXTACoTxqMnlRm/BigMWkwGsXUdBkA+NGzlnrm0gWTKzx0QzIA
-        4EeTyJpIdsFoZrlt5ALrGIA6dOX77cn7QhyMHHhx34aLk8nLAFBFx4zpbD51kgajMWUN+y9WVpJ/AwCN
-        7evuq3q4XxqM1MyyZpcZJgOIY+kYv2aF5VLaSCYYWfz41o1ijrzMJ28DaD00sq9vln9jkTXBSN2eaeBf
-        dWl3gNNkoBXQ1LHWKzoeWedc+M5Y9gZTVXVpK+1IrtP9aIPYzGpUX4t7HcDv60E2DAYRsxIMYoAEgxgg
-        wSAGSDCI+zayv9/uRrTa8sMdAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAEuSURBVFhH7ZZbagJBEEVHXYCIQRQ3pR/zMU8GBH/8cQkDWV3ARISQkCiuxNet4So+mhYzJRjp
+        A4VWVXfX0WlBz+F4RCpRFG3vEGuebyfP86phs0ZsOMLOkYBsqJSNs/Ouc/OGKzyXAGqjNE2bTC9IkqQV
+        x3GPaYGaAPKx1DHgwyQhw9H/RKwQfZb1BMIwbKA2Ye8bIh22PAh1Uftl7833/TpbegKCScI2XFAVEI4l
+        IDDH65LrL4YL6gKCSGD4jOuKe2EaLtxFQL52DF1w3RZCP/I42D5BXeDsmb8jpnx/cjH3qAqYLpzt1yGo
+        Cdhuu01CTQD5q9Rx+CwIgheWD2RZ1kb/S9ZAaMCyngA+cQ3Dc9PwPSKB4UOmBWoCf8UJlBHQjn8iQIz/
+        70qGw2HA83Y15hw12voDnAAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="btnGuardarAlumno.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

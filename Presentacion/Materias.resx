@@ -128,6 +128,17 @@
         RU5ErkJggg==
 </value>
   </data>
+  <data name="bunifuImageButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAEuSURBVFhH7ZZbagJBEEVHXYCIQRQ3pR/zMU8GBH/8cQkDWV3ARISQkCiuxNet4So+mhYzJRjp
+        A4VWVXfX0WlBz+F4RCpRFG3vEGuebyfP86phs0ZsOMLOkYBsqJSNs/Ouc/OGKzyXAGqjNE2bTC9IkqQV
+        x3GPaYGaAPKx1DHgwyQhw9H/RKwQfZb1BMIwbKA2Ye8bIh22PAh1Uftl7833/TpbegKCScI2XFAVEI4l
+        IDDH65LrL4YL6gKCSGD4jOuKe2EaLtxFQL52DF1w3RZCP/I42D5BXeDsmb8jpnx/cjH3qAqYLpzt1yGo
+        Cdhuu01CTQD5q9Rx+CwIgheWD2RZ1kb/S9ZAaMCyngA+cQ3Dc9PwPSKB4UOmBWoCf8UJlBHQjn8iQIz/
+        70qGw2HA83Y15hw12voDnAAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>141, 17</value>
   </metadata>

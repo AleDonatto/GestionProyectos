@@ -128,6 +128,17 @@
         RU5ErkJggg==
 </value>
   </data>
+  <data name="bunifuImageButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAS5JREFUWEft
+        lltqAkEQRUddgIhBFDelH/MxTwYEf/xxCQNZXcBEhJCQKK7E163hKj6aFjMlGOkDhVZVd9fRaUHP4XhE
+        KlEUbe8Qa55vJ8/zqmGzRmw4ws6RgGyolI2z865z84YrPJcAaqM0TZtML0iSpBXHcY9pgZoA8rHUMeDD
+        JCHD0f9ErBB9lvUEwjBsoDZh7xsiHbY8CHVR+2Xvzff9Olt6AoJJwjZcUBUQjiUgMMfrkusvhgvqAoJI
+        YPiM64p7YRou3EVAvnYMXXDdFkI/8jjYPkFd4OyZvyOmfH9yMfeoCpgunO3XIagJ2G67TUJNAPmr1HH4
+        LAiCF5YPZFnWRv9L1kBowLKeAD5xDcNz0/A9IoHhQ6YFagJ/xQmUEdCOfyJAjP/vSobDYcDzdjXmHDXa
+        +gOcAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="btnSeleccionar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAA3NJREFUaEPt

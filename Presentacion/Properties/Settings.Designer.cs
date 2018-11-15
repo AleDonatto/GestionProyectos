@@ -32,5 +32,16 @@ namespace Presentacion.Properties {
                 return ((string)(this["ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;password=abcd;persistsecurityinfo=True;database=con" +
+            "trol_escolar")]
+        public string control_escolarConnectionString {
+            get {
+                return ((string)(this["control_escolarConnectionString"]));
+            }
+        }
     }
 }

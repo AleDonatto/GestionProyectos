@@ -12,15 +12,15 @@ namespace Presentacion
         public ListaGrupos()
         {
             InitializeComponent();
-            //idGrupo = grupo;
+            Cargar_parametro();
         }
 
-        public void Cargra_parametro(int grupo) {
-            idGrupo = grupo;
+        public void Cargar_parametro() {
+            idGrupo = Convert.ToInt32(this.Parameters["Grupos"].Value);
         }
         private void ListaGrupos_DataSourceDemanded(object sender, EventArgs e)
         {
-            this.Parameters["Lista_grupo"].Value = idGrupo;
+            this.Parameters["Grupos"].Value = idGrupo;
         }
     }
 }

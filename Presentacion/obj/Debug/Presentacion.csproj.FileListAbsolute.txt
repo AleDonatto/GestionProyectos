@@ -204,7 +204,6 @@ C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Presentac
 C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Presentacion\obj\Debug\Presentacion.csprojAssemblyReference.cache
 C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Presentacion\obj\Debug\Presentacion.Alumnos.resources
 C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Presentacion\obj\Debug\Presentacion.Form1.resources
-C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Presentacion\obj\Debug\Presentacion.FormatoListaGrupos.resources
 C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Presentacion\obj\Debug\Presentacion.Grupos.resources
 C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Presentacion\obj\Debug\Presentacion.Inscripciones.resources
 C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Presentacion\obj\Debug\Presentacion.ListaGrupos.resources
@@ -218,3 +217,5 @@ C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Presentac
 C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
 C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Presentacion\bin\Debug\Presentacion.pdb
+C:\Users\OFFICE\Documents\Visual Studio 2017\Projects\GestionProyectos\Presentacion\obj\Debug\Presentacion.VerListas.resources

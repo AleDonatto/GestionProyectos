@@ -60,28 +60,53 @@ namespace Presentacion
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
-            if (cbGrupoCaptura.Text == "1" || cbGrupoCaptura.Text == "2")
+            if (cbGrupoCaptura.Text == "1")
             {
+                limpiar_Tabla();
                 ds = consultas.C_alumnos_calificaciones_grado1();
+                dgvCalificaciones.DataSource = ds.Tables[0];
+                Primer_segundo_grado();
+                Cargar_Opciones_Tabla();
+            }
+            else if (cbGrupoCaptura.Text == "2")
+            {
+                limpiar_Tabla();
+                ds = consultas.C_alumnos_calificaciones_grado2();
                 dgvCalificaciones.DataSource = ds.Tables[0];
                 Primer_segundo_grado();
                 Cargar_Opciones_Tabla();
             }
             else if (cbGrupoCaptura.Text == "3")
             {
-                Quitar_mat_1();
-                //ds = consultas.C_alumnos_calificaciones_grado3();
-                //dgvCalificaciones.DataSource = ds.Tables[0];
-                //Tercer_grado();
-                //Cargar_Opciones_Tabla();               
+                limpiar_Tabla();
+                ds = consultas.C_alumnos_calificaciones_grado3();
+                dgvCalificaciones.DataSource = ds.Tables[0];
+                Tercer_grado();
+                Cargar_Opciones_Tabla();
             }
-            else if (cbGrupoCaptura.Text == "4" || cbGrupoCaptura.Text == "5" || cbGrupoCaptura.Text == "6")
+            else if (cbGrupoCaptura.Text == "4")
             {
+                limpiar_Tabla();
                 ds = consultas.C_alumnos_calificaciones_grado4();
                 dgvCalificaciones.DataSource = ds.Tables[0];
                 Cuarto_quinto_sexto();
                 Cargar_Opciones_Tabla();
-            }   
+            }
+            else if (cbGrupoCaptura.Text == "5")
+            {
+                limpiar_Tabla();
+                ds = consultas.C_alumnos_calificaciones_grado5();
+                dgvCalificaciones.DataSource = ds.Tables[0];
+                Cuarto_quinto_sexto();
+                Cargar_Opciones_Tabla();
+            }
+            else if (cbGrupoCaptura.Text == "6") {
+                limpiar_Tabla();
+                ds = consultas.C_alumnos_calificaciones_grado6();
+                dgvCalificaciones.DataSource = ds.Tables[0];
+                Cuarto_quinto_sexto();
+                Cargar_Opciones_Tabla();
+            }
         }
 
         private void dgvCalificaciones_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -114,8 +139,6 @@ namespace Presentacion
                     string mensaje = consultas.Inser_cal_1and2(español, mate, civismo, efisica, artes, sociedad, compu, ingles, grado, periodo, curp);
                     MessageBox.Show(mensaje, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
-                
             }
             else if (cbGrupoCaptura.Text == "3")
             {
@@ -193,8 +216,8 @@ namespace Presentacion
                 e.Handled = true;
         }
 
-
-        public void Primer_segundo_grado() {
+        public void Primer_segundo_grado()
+        {
             DataGridViewTextBoxColumn español = new DataGridViewTextBoxColumn();
             español.HeaderText = "Español";
             dgvCalificaciones.Columns.Add(español);
@@ -221,7 +244,8 @@ namespace Presentacion
             dgvCalificaciones.Columns.Add(ingles);
         }
 
-        public void Tercer_grado() {
+        public void Tercer_grado()
+        {
             DataGridViewTextBoxColumn español = new DataGridViewTextBoxColumn();
             español.HeaderText = "Español";
             dgvCalificaciones.Columns.Add(español);
@@ -251,7 +275,8 @@ namespace Presentacion
             dgvCalificaciones.Columns.Add(ingles);
         }
 
-        public void Cuarto_quinto_sexto() {
+        public void Cuarto_quinto_sexto()
+        {
             DataGridViewTextBoxColumn español = new DataGridViewTextBoxColumn();
             español.HeaderText = "Español";
             dgvCalificaciones.Columns.Add(español);
@@ -284,11 +309,17 @@ namespace Presentacion
             dgvCalificaciones.Columns.Add(ingles);
         }
 
-        public void Quitar_mat_1() {
-            while(dgvCalificaciones.ColumnCount > 1) {
+        public void limpiar_Tabla()
+        {
+            while (dgvCalificaciones.ColumnCount > 0)
+            {
                 dgvCalificaciones.Columns.RemoveAt(0);
-                dgvCalificaciones.Columns.Remove("btnGuardar");
             }
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -83,5 +83,10 @@ namespace Presentacion
         {
 
         }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

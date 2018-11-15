@@ -67,14 +67,19 @@
     <Reference Include="DevExpress.XtraReports.v18.1.Extensions, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraRichEdit.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604" />
     <Reference Include="Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Library\bin\Debug\Library.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -92,17 +97,17 @@
     <Compile Include="Alumnos.Designer.cs">
       <DependentUpon>Alumnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="BoletaIndividual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoletaIndividual.Designer.cs">
+      <DependentUpon>BoletaIndividual.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormatoListaGrupos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormatoListaGrupos.Designer.cs">
-      <DependentUpon>FormatoListaGrupos.cs</DependentUpon>
     </Compile>
     <Compile Include="Grupos.cs">
       <SubType>Form</SubType>
@@ -142,14 +147,20 @@
     <Compile Include="Captura_Calificaciones.Designer.cs">
       <DependentUpon>Captura_Calificaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="VerListas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerListas.Designer.cs">
+      <DependentUpon>VerListas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Alumnos.resx">
       <DependentUpon>Alumnos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BoletaIndividual.resx">
+      <DependentUpon>BoletaIndividual.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormatoListaGrupos.resx">
-      <DependentUpon>FormatoListaGrupos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Grupos.resx">
       <DependentUpon>Grupos.cs</DependentUpon>
@@ -178,6 +189,9 @@
     </Compile>
     <EmbeddedResource Include="Captura_Calificaciones.resx">
       <DependentUpon>Captura_Calificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerListas.resx">
+      <DependentUpon>VerListas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

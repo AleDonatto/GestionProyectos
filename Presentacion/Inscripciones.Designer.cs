@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inscripciones));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.btnGuardar_Tutor = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txtDireccion_tutor = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -75,7 +74,9 @@
             this.txtCURP = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnRefrescar = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRefrescar)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -87,7 +88,7 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.btnGuardar_Tutor);
+            this.bunifuGradientPanel1.Controls.Add(this.btnRefrescar);
             this.bunifuGradientPanel1.Controls.Add(this.txtDireccion_tutor);
             this.bunifuGradientPanel1.Controls.Add(this.label11);
             this.bunifuGradientPanel1.Controls.Add(this.label20);
@@ -139,32 +140,6 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1034, 613);
             this.bunifuGradientPanel1.TabIndex = 0;
-            // 
-            // btnGuardar_Tutor
-            // 
-            this.btnGuardar_Tutor.ActiveBorderThickness = 1;
-            this.btnGuardar_Tutor.ActiveCornerRadius = 20;
-            this.btnGuardar_Tutor.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnGuardar_Tutor.ActiveForecolor = System.Drawing.Color.White;
-            this.btnGuardar_Tutor.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnGuardar_Tutor.BackColor = System.Drawing.SystemColors.Control;
-            this.btnGuardar_Tutor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGuardar_Tutor.BackgroundImage")));
-            this.btnGuardar_Tutor.ButtonText = "Guardar Datos Tutor";
-            this.btnGuardar_Tutor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardar_Tutor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar_Tutor.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnGuardar_Tutor.IdleBorderThickness = 1;
-            this.btnGuardar_Tutor.IdleCornerRadius = 20;
-            this.btnGuardar_Tutor.IdleFillColor = System.Drawing.Color.White;
-            this.btnGuardar_Tutor.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnGuardar_Tutor.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnGuardar_Tutor.Location = new System.Drawing.Point(746, 215);
-            this.btnGuardar_Tutor.Margin = new System.Windows.Forms.Padding(5);
-            this.btnGuardar_Tutor.Name = "btnGuardar_Tutor";
-            this.btnGuardar_Tutor.Size = new System.Drawing.Size(204, 41);
-            this.btnGuardar_Tutor.TabIndex = 58;
-            this.btnGuardar_Tutor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnGuardar_Tutor.Click += new System.EventHandler(this.btnGuardar_Tutor_Click);
             // 
             // txtDireccion_tutor
             // 
@@ -467,8 +442,7 @@
             this.cbGenero.FormattingEnabled = true;
             this.cbGenero.Items.AddRange(new object[] {
             "Masculino",
-            "Femenino",
-            "Otro"});
+            "Femenino"});
             this.cbGenero.Location = new System.Drawing.Point(717, 486);
             this.cbGenero.Name = "cbGenero";
             this.cbGenero.Size = new System.Drawing.Size(168, 24);
@@ -625,6 +599,22 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "INSCRIPCION DE ALUMNOS";
             // 
+            // btnRefrescar
+            // 
+            this.btnRefrescar.BackColor = System.Drawing.Color.White;
+            this.btnRefrescar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btnRefrescar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefrescar.Image = ((System.Drawing.Image)(resources.GetObject("btnRefrescar.Image")));
+            this.btnRefrescar.ImageActive = null;
+            this.btnRefrescar.Location = new System.Drawing.Point(988, 6);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(39, 35);
+            this.btnRefrescar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnRefrescar.TabIndex = 60;
+            this.btnRefrescar.TabStop = false;
+            this.btnRefrescar.Zoom = 10;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
+            // 
             // Inscripciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -637,6 +627,7 @@
             this.Text = "Inscripciones";
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRefrescar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -669,7 +660,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox CBGradoinscripcion;
         private System.Windows.Forms.Label label19;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnGuardar_Tutor;
         private System.Windows.Forms.TextBox txtDireccion_tutor;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label20;
@@ -688,5 +678,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnGuardarAlumno;
         private System.Windows.Forms.TextBox txtTipoSangre;
         private System.Windows.Forms.Label label21;
+        private Bunifu.Framework.UI.BunifuImageButton btnRefrescar;
     }
 }

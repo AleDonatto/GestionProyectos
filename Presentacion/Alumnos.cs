@@ -35,10 +35,18 @@ namespace Presentacion
 
         private void btnBuscar_grupo_Click(object sender, EventArgs e)
         {
-            int grado = Convert.ToInt32(CBGruposeleccinar.Text);
-            DataSet ds = new DataSet();
-            ds = metodos.Consulta_Alumnos_Grupo(grado);
-            dgvAlumnos.DataSource = ds.Tables[0];
+            if (CBGruposeleccinar.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione un grupo a consultar", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else {
+                int grado = Convert.ToInt32(CBGruposeleccinar.Text);
+
+                DataSet ds = new DataSet();
+                ds = metodos.Consulta_Alumnos_Grupo(grado);
+                dgvAlumnos.DataSource = ds.Tables[0];
+            }
+      
         }
         
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -84,6 +92,11 @@ namespace Presentacion
                 txtCurp.Clear(); txtAP_paterno.Clear(); txtAp_materno.Clear(); txtNombre_alumno.Clear(); txtEdad.Clear(); txtDireccion.Clear();
                 cargra_datos();
             }
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -34,13 +34,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.cbPeriodo = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnSeleccionar = new Bunifu.Framework.UI.BunifuImageButton();
             this.cbGrupoCaptura = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvCalificaciones = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.bunifuGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSeleccionar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCalificaciones)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +57,9 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.comboBox1);
+            this.bunifuGradientPanel1.Controls.Add(this.label3);
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuImageButton1);
+            this.bunifuGradientPanel1.Controls.Add(this.cbPeriodo);
             this.bunifuGradientPanel1.Controls.Add(this.label2);
             this.bunifuGradientPanel1.Controls.Add(this.btnSeleccionar);
             this.bunifuGradientPanel1.Controls.Add(this.cbGrupoCaptura);
@@ -69,6 +74,52 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1007, 711);
             this.bunifuGradientPanel1.TabIndex = 0;
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.White;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(965, 3);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(36, 32);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 6;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            // 
+            // cbPeriodo
+            // 
+            this.cbPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbPeriodo.FormattingEnabled = true;
+            this.cbPeriodo.Items.AddRange(new object[] {
+            "Diagnostico-2018",
+            "Septiembre-2018",
+            "Octubre-2018",
+            "Noviembre-2018",
+            "Diciembre-2018",
+            "Enero-2019",
+            "Febrero-2019",
+            "Marzo-2019",
+            "Abril-2019",
+            "Mayo-2019",
+            "Junio-2019"});
+            this.cbPeriodo.Location = new System.Drawing.Point(601, 71);
+            this.cbPeriodo.Name = "cbPeriodo";
+            this.cbPeriodo.Size = new System.Drawing.Size(179, 24);
+            this.cbPeriodo.TabIndex = 5;
+            this.cbPeriodo.Text = "Seleccione una opcion:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(428, 74);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(167, 17);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Periodo de Calificaciones";
             // 
             // btnSeleccionar
             // 
@@ -131,41 +182,24 @@
             this.dgvCalificaciones.EnableHeadersVisualStyles = false;
             this.dgvCalificaciones.HeaderBgColor = System.Drawing.Color.SeaGreen;
             this.dgvCalificaciones.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvCalificaciones.Location = new System.Drawing.Point(10, 169);
+            this.dgvCalificaciones.Location = new System.Drawing.Point(10, 109);
             this.dgvCalificaciones.Name = "dgvCalificaciones";
             this.dgvCalificaciones.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvCalificaciones.Size = new System.Drawing.Size(980, 378);
+            this.dgvCalificaciones.Size = new System.Drawing.Size(980, 283);
             this.dgvCalificaciones.TabIndex = 0;
             this.dgvCalificaciones.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCalificaciones_CellMouseDoubleClick);
             this.dgvCalificaciones.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvCalificaciones_RowsAdded);
             this.dgvCalificaciones.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgvCalificaciones_KeyPress);
             // 
-            // comboBox1
+            // label3
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
-            this.comboBox1.Location = new System.Drawing.Point(601, 71);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(179, 24);
-            this.comboBox1.TabIndex = 5;
-            this.comboBox1.Text = "Seleccione una opcion:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(428, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 17);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Periodo de Calificaciones";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label3.Location = new System.Drawing.Point(16, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(168, 17);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Captura de Calificaciones";
             // 
             // Captura_Calificaciones
             // 
@@ -178,6 +212,7 @@
             this.Name = "Captura_Calificaciones";
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSeleccionar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCalificaciones)).EndInit();
             this.ResumeLayout(false);
@@ -192,7 +227,9 @@
         private Bunifu.Framework.UI.BunifuImageButton btnSeleccionar;
         private System.Windows.Forms.ComboBox cbGrupoCaptura;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbPeriodo;
         private System.Windows.Forms.Label label2;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private System.Windows.Forms.Label label3;
     }
 }

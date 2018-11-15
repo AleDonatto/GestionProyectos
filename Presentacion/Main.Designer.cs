@@ -50,6 +50,8 @@
             this.btnGrupos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.P_formularios = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnBoletas = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnEstadiscticas = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
@@ -112,6 +114,8 @@
             this.Pmenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Pmenu.BackgroundImage")));
             this.Pmenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Pmenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Pmenu.Controls.Add(this.btnEstadiscticas);
+            this.Pmenu.Controls.Add(this.btnBoletas);
             this.Pmenu.Controls.Add(this.btnAlumnos);
             this.Pmenu.Controls.Add(this.bunifuSeparator2);
             this.Pmenu.Controls.Add(this.bunifuSeparator1);
@@ -252,7 +256,7 @@
             this.btnModificarCalificaciones.IconVisible = true;
             this.btnModificarCalificaciones.IconZoom = 90D;
             this.btnModificarCalificaciones.IsTab = false;
-            this.btnModificarCalificaciones.Location = new System.Drawing.Point(7, 600);
+            this.btnModificarCalificaciones.Location = new System.Drawing.Point(7, 607);
             this.btnModificarCalificaciones.Name = "btnModificarCalificaciones";
             this.btnModificarCalificaciones.Normalcolor = System.Drawing.Color.WhiteSmoke;
             this.btnModificarCalificaciones.OnHovercolor = System.Drawing.Color.LightGray;
@@ -453,6 +457,74 @@
             this.P_formularios.Size = new System.Drawing.Size(1042, 661);
             this.P_formularios.TabIndex = 6;
             // 
+            // btnBoletas
+            // 
+            this.btnBoletas.Activecolor = System.Drawing.Color.LightGray;
+            this.btnBoletas.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnBoletas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBoletas.BorderRadius = 0;
+            this.btnBoletas.ButtonText = "BOELTA DE CALIFICACIONES";
+            this.btnBoletas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBoletas.DisabledColor = System.Drawing.Color.Gray;
+            this.btnBoletas.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnBoletas.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnBoletas.Iconimage")));
+            this.btnBoletas.Iconimage_right = null;
+            this.btnBoletas.Iconimage_right_Selected = null;
+            this.btnBoletas.Iconimage_Selected = null;
+            this.btnBoletas.IconMarginLeft = 0;
+            this.btnBoletas.IconMarginRight = 0;
+            this.btnBoletas.IconRightVisible = true;
+            this.btnBoletas.IconRightZoom = 0D;
+            this.btnBoletas.IconVisible = true;
+            this.btnBoletas.IconZoom = 90D;
+            this.btnBoletas.IsTab = false;
+            this.btnBoletas.Location = new System.Drawing.Point(7, 505);
+            this.btnBoletas.Name = "btnBoletas";
+            this.btnBoletas.Normalcolor = System.Drawing.Color.WhiteSmoke;
+            this.btnBoletas.OnHovercolor = System.Drawing.Color.LightGray;
+            this.btnBoletas.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnBoletas.selected = false;
+            this.btnBoletas.Size = new System.Drawing.Size(261, 48);
+            this.btnBoletas.TabIndex = 14;
+            this.btnBoletas.Text = "BOELTA DE CALIFICACIONES";
+            this.btnBoletas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnBoletas.Textcolor = System.Drawing.Color.Black;
+            this.btnBoletas.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnEstadiscticas
+            // 
+            this.btnEstadiscticas.Activecolor = System.Drawing.Color.LightGray;
+            this.btnEstadiscticas.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnEstadiscticas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEstadiscticas.BorderRadius = 0;
+            this.btnEstadiscticas.ButtonText = "ESTADISTICAS";
+            this.btnEstadiscticas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEstadiscticas.DisabledColor = System.Drawing.Color.Gray;
+            this.btnEstadiscticas.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnEstadiscticas.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnEstadiscticas.Iconimage")));
+            this.btnEstadiscticas.Iconimage_right = null;
+            this.btnEstadiscticas.Iconimage_right_Selected = null;
+            this.btnEstadiscticas.Iconimage_Selected = null;
+            this.btnEstadiscticas.IconMarginLeft = 0;
+            this.btnEstadiscticas.IconMarginRight = 0;
+            this.btnEstadiscticas.IconRightVisible = true;
+            this.btnEstadiscticas.IconRightZoom = 0D;
+            this.btnEstadiscticas.IconVisible = true;
+            this.btnEstadiscticas.IconZoom = 90D;
+            this.btnEstadiscticas.IsTab = false;
+            this.btnEstadiscticas.Location = new System.Drawing.Point(6, 556);
+            this.btnEstadiscticas.Name = "btnEstadiscticas";
+            this.btnEstadiscticas.Normalcolor = System.Drawing.Color.WhiteSmoke;
+            this.btnEstadiscticas.OnHovercolor = System.Drawing.Color.LightGray;
+            this.btnEstadiscticas.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnEstadiscticas.selected = false;
+            this.btnEstadiscticas.Size = new System.Drawing.Size(261, 48);
+            this.btnEstadiscticas.TabIndex = 15;
+            this.btnEstadiscticas.Text = "ESTADISTICAS";
+            this.btnEstadiscticas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEstadiscticas.Textcolor = System.Drawing.Color.Black;
+            this.btnEstadiscticas.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -496,5 +568,7 @@
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         public Bunifu.Framework.UI.BunifuFlatButton btnAlumnos;
+        private Bunifu.Framework.UI.BunifuFlatButton btnEstadiscticas;
+        private Bunifu.Framework.UI.BunifuFlatButton btnBoletas;
     }
 }

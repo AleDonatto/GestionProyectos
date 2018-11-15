@@ -79,8 +79,13 @@ namespace Presentacion
 
         private void btnListasGrupos_Click(object sender, EventArgs e)
         {
-            FormatoListaGrupos pdf = new FormatoListaGrupos();
-            pdf.ShowDialog();
+            VerListas pdf = new VerListas();
+            pdf.Show();
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
